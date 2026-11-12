@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "suite": "Stay, Shift or Step Back? The Games",
+    "key_note": "Stay, Shift or Step Back? Selling Homes in DC and Maryland, 2027 to 2028",
+    "key_note_slug": "stay-shift-step-back",
+    "data_version": "2026-11-11",
+    "last_checked": "2026-11-11",
+    "credit": "Questions from Between Keys. Research and explanations by my AI assistant.",
+    "disclaimer": "For education only. Not financial, legal or tax advice. Check with a lender, CPA, attorney or your broker before acting.",
+    "substack_url": "https://substack.com/@betweenkeys",
+    "substack_label": "Read more on the Between Keys Substack",
+    "share_prompt": "Send this to someone who's buying or selling next year.",
+    "games_hub_url": "../",
+    "feedback_url": "",
+    "feedback_email": "techteam@betweenkeys.org",
+    "data_note": "Edit numbers here. Every fact keeps its as_of date and source id. Pages read this file live, so no code changes are needed."
+  },
+  "sources": {
+    "bright_oct_2026": {
+      "name": "Bright MLS October 2026 Housing Market Report",
+      "publisher": "Bright MLS",
+      "kind": "primary",
+      "published": "2026-11-10",
+      "url": "https://www.globenewswire.com/news-release/2026/11/10/3400010/0/en/bright-mls-october-2026-housing-market-report-housing-market-momentum-slows-considerably.html",
+      "get_latest": "Bright MLS posts a new monthly report around the 10th of each month."
+    },
+    "freddie_pmms": {
+      "name": "Primary Mortgage Market Survey",
+      "publisher": "Freddie Mac",
+      "kind": "primary",
+      "published": "2026-11-05",
+      "url": "https://www.freddiemac.com/pmms",
+      "get_latest": "Freddie Mac updates this every Thursday."
+    },
+    "ap_rates_2026_11_05": {
+      "name": "Average US 30-year mortgage rate falls to 7.18% this week",
+      "publisher": "Associated Press via WCAX",
+      "kind": "news",
+      "published": "2026-11-05",
+      "url": "https://www.wcax.com/2026/11/05/average-us-30-year-mortgage-rate-falls-718-this-week-its-third-straight-decline/",
+      "get_latest": "Check the Freddie Mac page on Thursdays."
+    },
+    "dc_does_jul_2026": {
+      "name": "Washington Metro's Unemployment Rate at 5.2 Percent (July 2026)",
+      "publisher": "DC Department of Employment Services",
+      "kind": "official",
+      "published": "2026-09-02",
+      "url": "https://does.dc.gov/node/1844931",
+      "get_latest": "DC DOES posts a new month about six weeks after it ends."
+    },
+    "bls_metro_sep_2026": {
+      "name": "Unemployment rates lower in 226 metro areas, September 2025 to September 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "kind": "official",
+      "published": "2026-11",
+      "url": "https://www.bls.gov/opub/ted/2026/unemployment-rates-lower-in-226-metro-areas-from-september-2025-to-september-2026.htm",
+      "get_latest": "BLS posts metro unemployment monthly at bls.gov/lau."
+    },
+    "md_sb168_ch748": {
+      "name": "SB 168, Chapter 748 (2026): blockchain property records study",
+      "publisher": "Maryland General Assembly",
+      "kind": "official",
+      "published": "2026-05-26",
+      "url": "https://mgaleg.maryland.gov/2026RS/Chapters_noln/CH_748_sb0168e.pdf",
+      "get_latest": "The report is due to the Governor and General Assembly by December 31, 2026."
+    },
+    "congress_hr3633": {
+      "name": "H.R. 3633, CLARITY Act",
+      "publisher": "Congress.gov",
+      "kind": "official",
+      "published": "2026-09-15",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
+      "get_latest": "Congress.gov shows every action on the bill."
+    },
+    "npr_clarity_2026_09_15": {
+      "name": "A Trump-backed crypto bill just suffered a bruising defeat in the Senate",
+      "publisher": "NPR via St. Louis Public Radio",
+      "kind": "news",
+      "published": "2026-09-15",
+      "url": "https://www.stlpr.org/npr/2026-09-15/a-trump-backed-crypto-bill-just-suffered-a-bruising-defeat-in-the-senate-heres-why",
+      "get_latest": "A senator filed to bring it back up, so check Congress.gov for a new vote."
+    }
+  },
+  "facts": {
+    "dc_median_price": {
+      "display": "$625,000",
+      "value": 625000,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Washington DC metro median sold price, as Bright MLS defines the metro."
+    },
+    "dc_price_change": {
+      "display": "0.8%",
+      "value": -0.8,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Year over year."
+    },
+    "balt_median_price": {
+      "display": "$405,000",
+      "value": 405000,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Baltimore metro median, unchanged year over year."
+    },
+    "dc_pendings_change": {
+      "display": "20.4%",
+      "value": -20.4,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "New pending contracts, DC metro, year over year."
+    },
+    "dc_showings_change": {
+      "display": "15.2%",
+      "value": -15.2,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Showings, DC metro, year over year."
+    },
+    "region_closed_sales": {
+      "display": "16,794",
+      "value": 16794,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Closed sales, whole Bright MLS region, down 12.0% year over year."
+    },
+    "region_closed_change": {
+      "display": "12%",
+      "value": -12.0,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026"
+    },
+    "region_listings_change": {
+      "display": "22%",
+      "value": 22.1,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Active listings, whole Bright MLS region, year over year."
+    },
+    "dc_dom": {
+      "display": "16",
+      "value": 16,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Median days on market, DC metro, one day slower than a year earlier."
+    },
+    "balt_dom": {
+      "display": "19",
+      "value": 19,
+      "as_of": "October 2026",
+      "source": "bright_oct_2026",
+      "note": "Median days on market, Baltimore metro, four days slower."
+    },
+    "rate_now": {
+      "display": "7.18%",
+      "value": 7.18,
+      "as_of": "November 5, 2026",
+      "source": "freddie_pmms",
+      "note": "30-year fixed, weekly average."
+    },
+    "rate_year_ago": {
+      "display": "6.22%",
+      "value": 6.22,
+      "as_of": "November 2025",
+      "source": "freddie_pmms"
+    },
+    "payment_gap": {
+      "display": "$318",
+      "value": 318,
+      "as_of": "November 5, 2026",
+      "source": "freddie_pmms",
+      "note": "My AI assistant's math: $500,000 loan (20% down on $625,000), 30-year fixed, principal and interest only, 6.22% vs 7.18%."
+    },
+    "dcmd_unemp": {
+      "display": "5.2%",
+      "value": 5.2,
+      "as_of": "July 2026",
+      "source": "dc_does_jul_2026",
+      "note": "Washington DC-MD Metropolitan Division: DC plus Prince George's and Charles counties. Not seasonally adjusted."
+    },
+    "wash_metro_unemp": {
+      "display": "3.7%",
+      "value": 3.7,
+      "as_of": "September 2026",
+      "source": "bls_metro_sep_2026",
+      "note": "Washington-Arlington-Alexandria metro, which includes Northern Virginia."
+    },
+    "us_unemp_sep": {
+      "display": "4.0%",
+      "value": 4.0,
+      "as_of": "September 2026",
+      "source": "bls_metro_sep_2026"
+    },
+    "md_study_due": {
+      "display": "December 31, 2026",
+      "value": "2026-12-31",
+      "as_of": "May 26, 2026",
+      "source": "md_sb168_ch748"
+    },
+    "clarity_vote": {
+      "display": "49 to 50",
+      "value": "49-50",
+      "as_of": "September 15, 2026",
+      "source": "npr_clarity_2026_09_15",
+      "note": "Procedural vote that needed 60 yes votes."
+    }
+  },
+  "games": {
+    "headline-vs-street": {
+      "title": "Headline vs. Your Street",
+      "version": "1.0",
+      "tagline": "National news doesn't live on your street. Check it.",
+      "minutes": 4,
+      "cards": [
+        {
+          "id": "prices",
+          "headline": "Home prices are crashing.",
+          "question": "In October, what happened to the typical home price in the DC metro compared with a year earlier?",
+          "choices": [
+            {
+              "text": "Dropped more than 10%",
+              "correct": false
+            },
+            {
+              "text": "Slipped less than 1%",
+              "correct": true
+            },
+            {
+              "text": "Jumped more than 10%",
+              "correct": false
+            }
+          ],
+          "big": "{{dc_median_price}}",
+          "line": "Typical DC metro price, down {{dc_price_change}} from a year earlier. Baltimore metro: {{balt_median_price}}, no change.",
+          "explain": "That's a dip, not a crash. Typical here means the median: half of homes sold for more, half for less.",
+          "read": "Prices are getting softer at the edges. Bright MLS does not expect big price drops in most markets over the next few months.",
+          "facts": [
+            "dc_median_price",
+            "dc_price_change",
+            "balt_median_price"
+          ],
+          "sources": [
+            "bright_oct_2026"
+          ]
+        },
+        {
+          "id": "buyers",
+          "headline": "Nobody is buying homes.",
+          "question": "How did new purchase contracts in the DC metro change in October compared with a year earlier?",
+          "choices": [
+            {
+              "text": "Down about 5%",
+              "correct": false
+            },
+            {
+              "text": "Down about 20%",
+              "correct": true
+            },
+            {
+              "text": "Down about 60%",
+              "correct": false
+            }
+          ],
+          "big": "Down {{dc_pendings_change}}",
+          "line": "New DC metro contracts in October. Showings fell {{dc_showings_change}}. Across the whole Bright MLS region, {{region_closed_sales}} homes still closed, {{region_closed_change}} fewer than a year earlier.",
+          "explain": "Fewer buyers is not zero buyers. Homes still sell. Each sale just takes more work.",
+          "facts": [
+            "dc_pendings_change",
+            "dc_showings_change",
+            "region_closed_sales",
+            "region_closed_change"
+          ],
+          "sources": [
+            "bright_oct_2026"
+          ]
+        },
+        {
+          "id": "rates",
+          "headline": "Mortgage rates are finally dropping.",
+          "question": "On November 5, how did the average 30-year mortgage rate compare with a year earlier?",
+          "choices": [
+            {
+              "text": "Lower, around 5.5%",
+              "correct": false
+            },
+            {
+              "text": "About the same",
+              "correct": false
+            },
+            {
+              "text": "About a point higher",
+              "correct": true
+            }
+          ],
+          "big": "{{rate_now}}",
+          "line": "Average 30-year rate on November 5. A year earlier it was {{rate_year_ago}}.",
+          "explain": "The headline is half right. Rates have eased for three weeks in a row, but they're still about a point above last year. Your buyers in DC and Maryland pay close to this national average.",
+          "math": "On a {{dc_median_price}} home with 20% down, that one point adds about {{payment_gap}} a month to principal and interest.",
+          "facts": [
+            "rate_now",
+            "rate_year_ago",
+            "payment_gap"
+          ],
+          "sources": [
+            "freddie_pmms",
+            "ap_rates_2026_11_05"
+          ]
+        },
+        {
+          "id": "jobs",
+          "headline": "Unemployment is low. Jobs are fine.",
+          "question": "Which part of our area has unemployment higher than the national rate?",
+          "choices": [
+            {
+              "text": "The whole Washington region",
+              "correct": false
+            },
+            {
+              "text": "DC, Prince George's and Charles counties",
+              "correct": true
+            },
+            {
+              "text": "None of it",
+              "correct": false
+            }
+          ],
+          "big": "{{dcmd_unemp}}",
+          "line": "Unemployment in DC, Prince George's and Charles counties in July. The whole Washington region, Northern Virginia included: {{wash_metro_unemp}} in September. The U.S.: {{us_unemp_sep}} in September.",
+          "explain": "Where you draw the map changes the story. The region as a whole looks fine. Its inner core is doing worse than the country.",
+          "caution": "The 5.2% is not seasonally adjusted and comes from a different month, so treat the comparison as rough.",
+          "facts": [
+            "dcmd_unemp",
+            "wash_metro_unemp",
+            "us_unemp_sep"
+          ],
+          "sources": [
+            "dc_does_jul_2026",
+            "bls_metro_sep_2026"
+          ]
+        },
+        {
+          "id": "days",
+          "headline": "Homes are sitting on the market for months.",
+          "question": "How long did a typical DC metro home take to sell in October?",
+          "choices": [
+            {
+              "text": "About 16 days",
+              "correct": true
+            },
+            {
+              "text": "About 60 days",
+              "correct": false
+            },
+            {
+              "text": "About 120 days",
+              "correct": false
+            }
+          ],
+          "big": "{{dc_dom}} days",
+          "line": "Typical time to sell in the DC metro, one day slower than a year earlier. Baltimore metro: {{balt_dom}} days, four days slower. Homes for sale across the region: up {{region_listings_change}}.",
+          "explain": "Typical homes still move in a few weeks. Buyers have more homes to choose from, so the first two or three weeks matter most.",
+          "read": "The homes that sit for months are usually priced too high for this market.",
+          "facts": [
+            "dc_dom",
+            "balt_dom",
+            "region_listings_change"
+          ],
+          "sources": [
+            "bright_oct_2026"
+          ]
+        },
+        {
+          "id": "blockchain",
+          "headline": "Home sales are moving onto the blockchain.",
+          "question": "What has Maryland done about putting property records on a blockchain?",
+          "choices": [
+            {
+              "text": "Moved all deeds onto one",
+              "correct": false
+            },
+            {
+              "text": "Ordered a study",
+              "correct": true
+            },
+            {
+              "text": "Banned it",
+              "correct": false
+            }
+          ],
+          "big": "A study",
+          "line": "Gov. Moore signed SB 168 on May 26, 2026. The state assessments office has to report on using blockchain for property and lease records by {{md_study_due}}.",
+          "explain": "Deeds are still recorded by each county the usual way. A study is not a switch.",
+          "read": "Changes at Maryland closings are likely years away.",
+          "facts": [
+            "md_study_due"
+          ],
+          "sources": [
+            "md_sb168_ch748"
+          ]
+        },
+        {
+          "id": "crypto-rules",
+          "headline": "Crypto finally has clear rules.",
+          "question": "What happened to the CLARITY Act, the big crypto rulebook, in the Senate?",
+          "choices": [
+            {
+              "text": "It passed and became law",
+              "correct": false
+            },
+            {
+              "text": "It failed a key vote",
+              "correct": true
+            },
+            {
+              "text": "It never came up",
+              "correct": false
+            }
+          ],
+          "big": "{{clarity_vote}}",
+          "line": "The Senate vote on September 15, 2026. It needed 60 yes votes to move forward. The House passed the bill earlier.",
+          "explain": "Who polices most crypto is still unsettled. If a buyer wants to use crypto at a DC or Maryland closing, bring in a lender who handles it, early.",
+          "facts": [
+            "clarity_vote"
+          ],
+          "sources": [
+            "congress_hr3633",
+            "npr_clarity_2026_09_15"
+          ]
+        }
+      ],
+      "ranks": [
+        {
+          "min": 6,
+          "name": "Street expert",
+          "line": "You read past the headline almost every time."
+        },
+        {
+          "min": 4,
+          "name": "Good local read",
+          "line": "You caught most of the gaps between the news and your street."
+        },
+        {
+          "min": 0,
+          "name": "Headline reader, for now",
+          "line": "That's why this game exists. Play again and the local numbers will stick."
+        }
+      ],
+      "takeaways": [
+        "National headlines don't live on your street. Check the local number before you react.",
+        "DC metro prices dipped a little. Contracts and showings fell a lot. Slower, not crashed.",
+        "Rates eased from the fall peak but are still about a point above last year.",
+        "Where you draw the map changes the jobs story.",
+        "Maryland is studying blockchain records, and the big crypto rulebook stalled. Nothing changes at closings yet."
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Games | Learn by Playing | Between Keys</title>
+<meta name="description" content="Short, free games that turn Between Keys Key Notes into something you can play. No login, no timer, about five minutes each. Built for DC and Maryland.">
+<link rel="canonical" href="https://betweenkeys.org/games/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#2C2C2C">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Between Keys">
+<meta property="og:title" content="Between Keys Games">
+<meta property="og:description" content="Short, free games that turn Between Keys Key Notes into something you can play. No login, no timer.">
+<meta property="og:url" content="https://betweenkeys.org/games/">
+<meta property="og:image" content="https://betweenkeys.org/games/headline-vs-street/social.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Games hub: one column. Live games are cards you can tap; coming games are a quiet list. */
+:root {
+  --paper: #F5EFDC; --card: #FFFBF0; --ink: #2C2C2C; --muted: #5B5446; --rule: #DCCFAE;
+  --gold: #C9A84C; --gold-ink: #7A5F17; --on-gold: #1F1A0C;
+  --display: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --body: 'Work Sans', Arial, Helvetica, sans-serif;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) { :root {
+  --paper: #1E1C19; --card: #2A2723; --ink: #F5EFDC; --muted: #BDB39C; --rule: #45403A; --gold-ink: #DDBF6C; color-scheme: dark; } }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 19px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+.wrap { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.1; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--gold-ink); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.kicker { font-size: 14px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); }
+header { display: flex; flex-direction: column; gap: 8px; }
+header h1 { font-size: clamp(44px, 11vw, 64px); }
+header p.lede { font-size: 21px; max-width: 36ch; }
+section { display: flex; flex-direction: column; gap: 14px; }
+section h2 { font-size: 30px; }
+section > p { color: var(--muted); }
+.game { display: flex; flex-direction: column; gap: 10px; background: var(--card); border: 1px solid var(--rule); border-top: 6px double var(--ink);
+  border-radius: 6px; padding: 22px; text-decoration: none; color: var(--ink); }
+.game:hover { border-color: var(--gold); }
+.game .num { font-size: 13px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.game h3 { font-size: 34px; font-style: italic; }
+.game .play { align-self: flex-start; margin-top: 6px; background: var(--gold); color: var(--on-gold); font-weight: 600; border-radius: 10px; padding: 12px 22px; min-height: 52px; display: inline-flex; align-items: center; }
+.soon { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.soon li { padding: 14px 0; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 2px; }
+.soon li:last-child { border-bottom: 1px solid var(--rule); }
+.soon b { font-family: var(--display); font-size: 24px; font-weight: 600; }
+.soon span { color: var(--muted); font-size: 17px; }
+.tag { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+footer { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kicker">Between Keys · Learning Out Loud</p>
+    <h1>Games</h1>
+    <p class="lede">Short games that turn our Key Notes into something you can play. No login. No timer. About five minutes each.</p>
+  </header>
+
+  <section aria-labelledby="ssb">
+    <p class="kicker">Key Note</p>
+    <h2 id="ssb">Stay, Shift or Step Back? Selling homes in DC and Maryland, 2027 to 2028</h2>
+    <p>Five games for agents, their clients and anyone buying or selling soon.</p>
+
+    <a class="game" href="headline-vs-street/">
+      <span class="num">Game 1 of 5 · About 4 minutes</span>
+      <h3>Headline vs. Your Street</h3>
+      <span>Flip a national housing headline, guess what DC and Maryland data shows, then see the answer with its source.</span>
+      <span class="play">Play</span>
+    </a>
+
+    <p class="tag">Coming next</p>
+    <ul class="soon">
+      <li><b>Wire or Wait</b><span>Spot the fake closing email or text before money moves.</span></li>
+      <li><b>The Recipe Book</b><span>Match crypto and blockchain words to kitchen pictures and what they mean at closing.</span></li>
+      <li><b>The Payment Chain</b><span>Follow a war all the way to a monthly mortgage payment.</span></li>
+      <li><b>Stay, Shift or Step Back</b><span>Steer an agent's business through eight quarters of news.</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Questions from Between Keys. Research and explanations by my AI assistant.</p>
+    <p>For education only. Not financial, legal or tax advice.</p>
+    <p><a href="https://substack.com/@betweenkeys" target="_blank" rel="noopener">Read more on the Between Keys Substack</a> · <a href="../">Between Keys home</a></p>
+  </footer>
+</div>
+</body>
+</html>
