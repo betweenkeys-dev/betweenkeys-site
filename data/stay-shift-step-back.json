@@ -160,6 +160,54 @@
       "published": "2025-06-25",
       "url": "https://www.theblock.co/post/359708/fhfa-directs-fannie-mae-and-freddie-mac-to-explore-cryptocurrency-as-an-asset-for-mortgages",
       "get_latest": "Ask the lender which rule they follow today."
+    },
+    "eia_steo_oct2026": {
+      "name": "Short-Term Energy Outlook, October 2026: Global oil markets",
+      "publisher": "U.S. Energy Information Administration",
+      "kind": "official",
+      "published": "2026-10-06",
+      "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+      "get_latest": "EIA updates the outlook early each month."
+    },
+    "bls_cpi_sep2026": {
+      "name": "Consumer Price Index, September 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "kind": "official",
+      "published": "2026-10-14",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "get_latest": "BLS releases CPI monthly at bls.gov/cpi."
+    },
+    "bls_cpi_oct2026": {
+      "name": "Consumer Price Index, October 2026",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "kind": "official",
+      "published": "2026-11-10",
+      "url": "https://www.bls.gov/news.release/CPI.htm",
+      "get_latest": "This link always shows the newest CPI release."
+    },
+    "fed_2026_09_16": {
+      "name": "FOMC statement, September 16, 2026",
+      "publisher": "Federal Reserve",
+      "kind": "official",
+      "published": "2026-09-16",
+      "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260916a1.pdf",
+      "get_latest": "The Fed meets next December 8 and 9."
+    },
+    "fed_2026_10_28": {
+      "name": "FOMC statement, October 28, 2026",
+      "publisher": "Federal Reserve",
+      "kind": "official",
+      "published": "2026-10-28",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "get_latest": "The Fed meets next December 8 and 9."
+    },
+    "treasury_daily": {
+      "name": "Daily Treasury Par Yield Curve Rates",
+      "publisher": "U.S. Department of the Treasury",
+      "kind": "official",
+      "published": "daily",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
+      "get_latest": "Look at the 10 Yr column for today's yield."
     }
   },
   "facts": {
@@ -348,6 +396,94 @@
       "value": "2026-01-28",
       "as_of": "January 28, 2026",
       "source": "sec_tokenized_2026"
+    },
+    "war_start": {
+      "display": "late February 2026",
+      "value": "2026-02",
+      "as_of": "November 5, 2026",
+      "source": "ap_rates_2026_11_05"
+    },
+    "brent_2025_avg": {
+      "display": "$69",
+      "value": 69,
+      "as_of": "2025 average",
+      "source": "eia_steo_oct2026",
+      "note": "Brent crude, dollars per barrel."
+    },
+    "brent_sep_avg": {
+      "display": "$114",
+      "value": 114,
+      "as_of": "September 2026",
+      "source": "eia_steo_oct2026"
+    },
+    "brent_peak": {
+      "display": "$131",
+      "value": 131,
+      "as_of": "September 15, 2026",
+      "source": "eia_steo_oct2026"
+    },
+    "brent_2027_fcst": {
+      "display": "$84",
+      "value": 84,
+      "as_of": "EIA forecast, October 2026",
+      "source": "eia_steo_oct2026"
+    },
+    "cpi_sep": {
+      "display": "3.7%",
+      "value": 3.7,
+      "as_of": "September 2026",
+      "source": "bls_cpi_sep2026",
+      "note": "All items, 12 months. October's 12-month figure was not published because October 2025 data were never collected during the shutdown."
+    },
+    "gas_sep": {
+      "display": "34%",
+      "value": 34.2,
+      "as_of": "September 2026",
+      "source": "bls_cpi_sep2026",
+      "note": "Gasoline, 12 months."
+    },
+    "gas_oct": {
+      "display": "37%",
+      "value": 37.4,
+      "as_of": "October 2026",
+      "source": "bls_cpi_oct2026"
+    },
+    "fed_range": {
+      "display": "3.75% to 4%",
+      "value": "3.75-4.00",
+      "as_of": "October 28, 2026",
+      "source": "fed_2026_10_28",
+      "note": "Raised a quarter point on September 16, held on October 28 by a 10 to 2 vote. Both dissenters wanted another hike."
+    },
+    "ten_prewar": {
+      "display": "3.97%",
+      "value": 3.97,
+      "as_of": "before the war",
+      "source": "ap_rates_2026_11_05"
+    },
+    "ten_peak": {
+      "display": "over 5.30%",
+      "value": 5.3,
+      "as_of": "early October 2026",
+      "source": "ap_rates_2026_11_05"
+    },
+    "ten_now": {
+      "display": "4.84%",
+      "value": 4.84,
+      "as_of": "November 5, 2026",
+      "source": "ap_rates_2026_11_05"
+    },
+    "rate_feb_low": {
+      "display": "5.98%",
+      "value": 5.98,
+      "as_of": "late February 2026",
+      "source": "ap_rates_2026_11_05"
+    },
+    "rate_oct_peak": {
+      "display": "about 7.4%",
+      "value": 7.4,
+      "as_of": "early October 2026",
+      "source": "ap_rates_2026_11_05"
     }
   },
   "games": {
@@ -1055,6 +1191,190 @@
         "jpm_coin",
         "fannie_crypto",
         "fhfa_order_news"
+      ]
+    },
+    "payment-chain": {
+      "title": "The Payment Chain",
+      "version": "0.1",
+      "tagline": "How a war halfway around the world reaches your buyer's monthly payment.",
+      "minutes": 4,
+      "intro": "First, put six links in order from the war to the payment. Then use the slider to see what each rate does to a monthly payment.",
+      "links": [
+        {
+          "id": "war",
+          "label": "War",
+          "kitchen": "A fire breaks out at the warehouse down the street.",
+          "fact": "The war with Iran begins in {{war_start}}. Iran threatens ships in the Strait of Hormuz, a narrow passage a big share of the world's oil sails through.",
+          "facts": [
+            "war_start"
+          ],
+          "sources": [
+            "ap_rates_2026_11_05"
+          ]
+        },
+        {
+          "id": "oil",
+          "label": "Oil",
+          "kitchen": "Oil is the butter of the economy. It's in almost everything, from the truck that brings the flour to the plastic wrap.",
+          "fact": "Brent oil averaged {{brent_sep_avg}} a barrel in September and hit {{brent_peak}} on September 15. For all of 2025 it averaged {{brent_2025_avg}}.",
+          "facts": [
+            "brent_sep_avg",
+            "brent_peak",
+            "brent_2025_avg"
+          ],
+          "sources": [
+            "eia_steo_oct2026"
+          ]
+        },
+        {
+          "id": "prices",
+          "label": "Prices",
+          "kitchen": "When butter doubles, every bakery raises its prices.",
+          "fact": "Prices rose {{cpi_sep}} over the year to September. Gasoline alone was up {{gas_sep}}, and {{gas_oct}} by October.",
+          "facts": [
+            "cpi_sep",
+            "gas_sep",
+            "gas_oct"
+          ],
+          "sources": [
+            "bls_cpi_sep2026",
+            "bls_cpi_oct2026"
+          ]
+        },
+        {
+          "id": "bonds",
+          "label": "Bonds",
+          "kitchen": "The people who lend the bakery money charge more, because the dollars they get back will buy less flour.",
+          "fact": "Investors wanted more interest. The 10-year Treasury yield went from {{ten_prewar}} before the war to {{ten_peak}} in early October. The Fed raised its rate in September to {{fed_range}}.",
+          "facts": [
+            "ten_prewar",
+            "ten_peak",
+            "fed_range"
+          ],
+          "sources": [
+            "ap_rates_2026_11_05",
+            "fed_2026_09_16",
+            "fed_2026_10_28"
+          ]
+        },
+        {
+          "id": "rates",
+          "label": "Mortgage rates",
+          "kitchen": "Flour money costs more, so every loaf costs more to make.",
+          "fact": "Mortgage rates follow the 10-year Treasury. The average 30-year rate went from {{rate_feb_low}} in late February to {{rate_oct_peak}} in early October. It was {{rate_now}} on November 5.",
+          "facts": [
+            "rate_feb_low",
+            "rate_oct_peak",
+            "rate_now"
+          ],
+          "sources": [
+            "ap_rates_2026_11_05",
+            "freddie_pmms"
+          ]
+        },
+        {
+          "id": "payment",
+          "label": "Monthly payment",
+          "kitchen": "Your customer pays more for the same loaf.",
+          "fact": "On a {{dc_median_price}} DC metro home with 20% down, today's rate costs about {{payment_gap}} more a month than a year ago.",
+          "facts": [
+            "dc_median_price",
+            "payment_gap"
+          ],
+          "sources": [
+            "bright_oct_2026",
+            "freddie_pmms"
+          ]
+        }
+      ],
+      "homes": [
+        {
+          "label": "DC metro",
+          "price_fact": "dc_median_price"
+        },
+        {
+          "label": "Baltimore metro",
+          "price_fact": "balt_median_price"
+        }
+      ],
+      "down_payment_pct": 20,
+      "slider": {
+        "min": 5.5,
+        "max": 8.5,
+        "step": 0.01,
+        "start_fact": "rate_now"
+      },
+      "markers": [
+        {
+          "label": "Late Feb low",
+          "fact": "rate_feb_low"
+        },
+        {
+          "label": "A year ago",
+          "fact": "rate_year_ago"
+        },
+        {
+          "label": "Now",
+          "fact": "rate_now"
+        },
+        {
+          "label": "Early Oct high",
+          "fact": "rate_oct_peak"
+        }
+      ],
+      "challenges": [
+        {
+          "text": "Slide to the late-February low, just before the war.",
+          "target_fact": "rate_feb_low",
+          "tolerance": 0.05
+        },
+        {
+          "text": "Slide to the early-October high.",
+          "target_fact": "rate_oct_peak",
+          "tolerance": 0.05
+        },
+        {
+          "text": "WHAT IF a peace deal reopens the strait? My AI assistant's read: rates could drift toward the mid 6s. Slide to 6.5%.",
+          "target": 6.5,
+          "tolerance": 0.05,
+          "whatif": true
+        }
+      ],
+      "ranks": [
+        {
+          "min": 3,
+          "name": "Chain expert",
+          "line": "You built the chain on your first try."
+        },
+        {
+          "min": 2,
+          "name": "Getting the links",
+          "line": "A couple of tries, and the chain makes sense now."
+        },
+        {
+          "min": 0,
+          "name": "Still connecting",
+          "line": "The order is tricky. Play again and it will click."
+        }
+      ],
+      "takeaways": [
+        "A war far away reaches your buyer's payment through oil, prices, bonds and mortgage rates.",
+        "Mortgage rates follow the 10-year Treasury more closely than they follow the Fed.",
+        "Each quarter point moves the payment by about $84 a month on a typical DC metro home with 20% down.",
+        "Quote dollars, not percents. People feel $318 a month. They don't feel one point.",
+        "My AI assistant's read: a peace deal that drops oil is the biggest thing that could lower rates in 2027. EIA already expects Brent to average {{brent_2027_fcst}} next year."
+      ],
+      "notes": "Payments are principal and interest only on a 30-year fixed loan. Taxes, insurance and HOA fees come on top. Payment math is my AI assistant's.",
+      "sources": [
+        "ap_rates_2026_11_05",
+        "eia_steo_oct2026",
+        "bls_cpi_sep2026",
+        "bls_cpi_oct2026",
+        "fed_2026_09_16",
+        "fed_2026_10_28",
+        "freddie_pmms",
+        "treasury_daily",
+        "bright_oct_2026"
       ]
     }
   }
