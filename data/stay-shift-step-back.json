@@ -1195,7 +1195,7 @@
     },
     "payment-chain": {
       "title": "The Payment Chain",
-      "version": "0.1",
+      "version": "1.0",
       "tagline": "How a war halfway around the world reaches your buyer's monthly payment.",
       "minutes": 4,
       "intro": "First, put six links in order from the war to the payment. Then use the slider to see what each rate does to a monthly payment.",
