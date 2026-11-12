@@ -897,7 +897,7 @@
     },
     "recipe-book": {
       "title": "The Recipe Book",
-      "version": "0.1",
+      "version": "1.0",
       "tagline": "Crypto words, explained with the kitchen you already know.",
       "minutes": 5,
       "intro": "Each card shows something from the kitchen. Name the money word it stands for, then pick what it means at a closing.",
