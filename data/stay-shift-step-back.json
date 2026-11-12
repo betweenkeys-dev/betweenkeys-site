@@ -206,9 +206,9 @@
     }
   },
   "games": {
-    "headline-vs-street": {
-      "title": "Headline vs. Your Street",
-      "version": "1.0",
+    "not-on-my-street": {
+      "title": "Not on My Street",
+      "version": "1.1",
       "tagline": "National news doesn't live on your street. Check it.",
       "minutes": 4,
       "cards": [
