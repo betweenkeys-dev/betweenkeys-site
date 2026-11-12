@@ -80,6 +80,38 @@
       "published": "2026-09-15",
       "url": "https://www.stlpr.org/npr/2026-09-15/a-trump-backed-crypto-bill-just-suffered-a-bruising-defeat-in-the-senate-heres-why",
       "get_latest": "A senator filed to bring it back up, so check Congress.gov for a new vote."
+    },
+    "ic3_2025": {
+      "name": "2025 Internet Crime Report",
+      "publisher": "FBI Internet Crime Complaint Center (IC3)",
+      "kind": "official",
+      "published": "2026-04",
+      "url": "https://www.ic3.gov/",
+      "get_latest": "IC3 posts a new annual report each spring under Annual Reports."
+    },
+    "cfpb_closing_scams": {
+      "name": "Mortgage closing scams: How to protect yourself and your closing funds",
+      "publisher": "Consumer Financial Protection Bureau",
+      "kind": "official",
+      "published": "2019-06-03",
+      "url": "https://www.consumerfinance.gov/archive/blog/mortgage-closing-scams-how-protect-yourself-and-your-closing-funds/",
+      "get_latest": "The CFPB's Mortgage Closing Checklist has a place to write down your trusted numbers."
+    },
+    "dc_disb_wire": {
+      "name": "Beware of Real Estate Wire Transfer Scams",
+      "publisher": "DC Department of Insurance, Securities and Banking",
+      "kind": "official",
+      "published": "2022",
+      "url": "https://disb.dc.gov/node/1436021",
+      "get_latest": "DC residents can call DISB at (202) 727-8000."
+    },
+    "fcc_spoofing": {
+      "name": "Caller ID Spoofing",
+      "publisher": "Federal Communications Commission",
+      "kind": "official",
+      "published": "undated",
+      "url": "https://www.fcc.gov/spoofing",
+      "get_latest": "The FCC page lists current call-blocking tools."
     }
   },
   "facts": {
@@ -204,6 +236,51 @@
       "as_of": "September 15, 2026",
       "source": "npr_clarity_2026_09_15",
       "note": "Procedural vote that needed 60 yes votes."
+    },
+    "bec_losses": {
+      "display": "$3.05 billion",
+      "value": 3046598558,
+      "as_of": "2025 (report published April 2026)",
+      "source": "ic3_2025",
+      "note": "Business email compromise: fake or hacked emails that redirect payments, including closing funds."
+    },
+    "bec_complaints": {
+      "display": "24,768",
+      "value": 24768,
+      "as_of": "2025",
+      "source": "ic3_2025"
+    },
+    "re_losses": {
+      "display": "$275 million",
+      "value": 275110419,
+      "as_of": "2025",
+      "source": "ic3_2025",
+      "note": "IC3's real estate category: rental, timeshare and property investment scams. Closing wire fraud is counted under business email compromise instead."
+    },
+    "re_complaints": {
+      "display": "12,368",
+      "value": 12368,
+      "as_of": "2025",
+      "source": "ic3_2025"
+    },
+    "rat_frozen": {
+      "display": "$679 million",
+      "value": 679013183,
+      "as_of": "2025",
+      "source": "ic3_2025",
+      "note": "Frozen by IC3's Recovery Asset Team out of $1.16 billion in attempted theft reported to it."
+    },
+    "rat_rate": {
+      "display": "58%",
+      "value": 58,
+      "as_of": "2025",
+      "source": "ic3_2025"
+    },
+    "disb_phone": {
+      "display": "(202) 727-8000",
+      "value": "2027278000",
+      "as_of": "November 2026",
+      "source": "dc_disb_wire"
     }
   },
   "games": {
@@ -453,6 +530,303 @@
         "Where you draw the map changes the jobs story.",
         "Maryland is studying blockchain records, and the big crypto rulebook stalled. Nothing changes at closings yet."
       ]
+    },
+    "wire-or-wait": {
+      "title": "Wire or Wait",
+      "version": "1.0",
+      "tagline": "Before any money moves, call a number you already have.",
+      "minutes": 4,
+      "scenario": "You're buying a $400,000 home in Prince George's County. You've put $8,000 down as earnest money, and you'll bring $41,850 to closing. These are example numbers.",
+      "setup": "At your first meeting, Larkspur Title hands you a card: \"We will never change wiring instructions by email. Call us at (301) 555-0142 before you send money.\" Your agent, Dana, gives you her cell. You save both.",
+      "saved": {
+        "title": {
+          "name": "Larkspur Title",
+          "role": "Your title company",
+          "number": "(301) 555-0142"
+        },
+        "agent": {
+          "name": "Dana Brooks",
+          "role": "Your agent",
+          "number": "(240) 555-0178"
+        }
+      },
+      "at_risk": 49850,
+      "messages": [
+        {
+          "id": "inspection",
+          "day": "14 days to closing",
+          "channel": "Text",
+          "from": "Dana Brooks",
+          "address": "(240) 555-0178 · saved",
+          "body": "Inspection is Tuesday at 10. I'll meet you at the house.",
+          "choices": [
+            {
+              "text": "Reply \"See you there\"",
+              "result": "best"
+            },
+            {
+              "text": "Call Dana first to check",
+              "result": "ok"
+            },
+            {
+              "text": "Ignore it",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "This came from a number you saved, and it doesn't ask for money or private details. Replying is fine. Not every message is a scam.",
+          "flags": []
+        },
+        {
+          "id": "new-bank",
+          "day": "9 days to closing",
+          "channel": "Email",
+          "from": "Larkspur Title Closings",
+          "address": "closings@larkspur-title.com",
+          "subject": "URGENT: Updated wiring instructions",
+          "body": "Our bank is under a routine audit. Please send your $8,000 earnest money deposit to the new account below today so your closing is not delayed. Questions? Call us at (301) 555-0199.",
+          "in_number": "(301) 555-0199",
+          "choices": [
+            {
+              "text": "Wire the $8,000 today",
+              "result": "bad",
+              "lose": 8000
+            },
+            {
+              "text": "Stop and call to check",
+              "result": "best",
+              "then": "number"
+            },
+            {
+              "text": "Reply to the email and ask",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "A change in wiring instructions is a stop sign, every time. Replying to the email only reaches the scammer.",
+          "flags": [
+            "The address has a dash: larkspur-title.com, not larkspurtitle.com.",
+            "\"Urgent\" and \"today\" are there to rush you.",
+            "The bank \"changed.\" Your title company told you it never changes wiring instructions by email.",
+            "The phone number in the email is not the one you saved."
+          ],
+          "call": "title"
+        },
+        {
+          "id": "voicemail",
+          "day": "7 days to closing",
+          "channel": "Voicemail",
+          "from": "Unknown number",
+          "address": "(410) 555-0163",
+          "body": "\"Hey, it's Dana. Title switched banks, so I'm texting you the new account. Wire it tonight so we stay on schedule, okay?\" The voice sounds just like Dana.",
+          "in_number": "(410) 555-0163",
+          "choices": [
+            {
+              "text": "Wire it tonight. It's Dana's voice",
+              "result": "bad",
+              "lose": 8000
+            },
+            {
+              "text": "Call Dana back",
+              "result": "best",
+              "then": "number"
+            },
+            {
+              "text": "Text the number back to ask",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "AI can copy a voice from a short clip, like a video posted online. A familiar voice is not proof. Call the number you saved for Dana.",
+          "flags": [
+            "It came from a number you don't know.",
+            "Same story as the email: the bank \"switched.\"",
+            "\"Tonight\" is pressure.",
+            "Agents almost never handle wiring instructions. Title companies do."
+          ],
+          "call": "agent"
+        },
+        {
+          "id": "portal",
+          "day": "6 days to closing",
+          "channel": "Email",
+          "from": "Larkspur Title",
+          "address": "notifications@larkspurtitle.com",
+          "subject": "Your Closing Disclosure is ready",
+          "body": "Your Closing Disclosure is ready to review. Tap here to log in to your secure portal.",
+          "choices": [
+            {
+              "text": "Tap the link in the email",
+              "result": "ok"
+            },
+            {
+              "text": "Open the portal from the bookmark you saved at the start",
+              "result": "best"
+            },
+            {
+              "text": "Ignore it",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "This one looks right, and you do need to read your Closing Disclosure. Going in through your own bookmark means a fake link can never fool you, so it's the habit to build.",
+          "flags": [
+            "The address matches your title company, but links can still be swapped. Your bookmark can't."
+          ]
+        },
+        {
+          "id": "final-wire",
+          "day": "3 days to closing",
+          "channel": "Email",
+          "from": "Larkspur Title",
+          "address": "closings@larkspurtitle.com",
+          "subject": "Final wiring instructions for closing",
+          "body": "Attached are your final wiring instructions for closing funds of $41,850. The account matches the one on the card we gave you at your first meeting.",
+          "choices": [
+            {
+              "text": "Wire it. It's from the right address",
+              "result": "bad",
+              "lose": 41850
+            },
+            {
+              "text": "Call (301) 555-0142 and read the account back to them",
+              "result": "best"
+            },
+            {
+              "text": "Wire it, then call to make sure",
+              "result": "bad",
+              "lose": 41850
+            }
+          ],
+          "explain": "Scammers break into the right email accounts too, then send messages that look exactly right. That's why the rule is about the number you call, not the address you see. Confirm first. A wire usually can't be undone.",
+          "flags": [
+            "Nothing looks wrong. That's the point. You can't tell a hacked email by looking."
+          ]
+        },
+        {
+          "id": "caller-id",
+          "day": "Closing day",
+          "channel": "Call",
+          "from": "Caller ID: Larkspur Title",
+          "address": "(301) 555-0142 · matches your saved number",
+          "body": "\"Hi, this is Morgan at Larkspur. Before we release your keys, please read me your bank account and routing numbers so we can confirm the transfer.\"",
+          "choices": [
+            {
+              "text": "Read the numbers. Caller ID matches",
+              "result": "bad",
+              "lose": 41850
+            },
+            {
+              "text": "Hang up and call (301) 555-0142 yourself",
+              "result": "best"
+            },
+            {
+              "text": "Give just the last four digits",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "Caller ID can be faked. The FCC calls it spoofing. If they called you, hang up and call the number you saved. Calling out is safe. Being called is not proof.",
+          "flags": [
+            "They called you and asked for account numbers.",
+            "\"Before we release your keys\" is pressure at the worst moment."
+          ]
+        },
+        {
+          "id": "refund",
+          "day": "5 days after closing",
+          "channel": "Email",
+          "from": "Larkspur Title Refunds",
+          "address": "refunds@larkspurtitle-escrow.com",
+          "subject": "You have a refund of $1,214",
+          "body": "Good news! You overpaid at closing. Reply with your bank account and routing numbers and we'll send your $1,214 refund this week.",
+          "choices": [
+            {
+              "text": "Reply with your account numbers",
+              "result": "bad",
+              "lose": 0,
+              "note": "Your account numbers are now in a scammer's hands."
+            },
+            {
+              "text": "Call (301) 555-0142 and ask if there's a refund",
+              "result": "best"
+            },
+            {
+              "text": "Delete it",
+              "result": "ok"
+            }
+          ],
+          "explain": "Scams don't stop at closing. Good news is bait too. Never send account numbers by email.",
+          "flags": [
+            "The address adds \"-escrow\" to the name.",
+            "It asks for account numbers by email."
+          ]
+        },
+        {
+          "id": "review",
+          "day": "6 days after closing",
+          "channel": "Text",
+          "from": "Dana Brooks",
+          "address": "(240) 555-0178 · saved",
+          "body": "Congrats again, neighbor! If you have a minute, here's where to leave me a review. No pressure.",
+          "choices": [
+            {
+              "text": "Leave Dana a review",
+              "result": "best"
+            },
+            {
+              "text": "Call Dana first to check",
+              "result": "ok"
+            },
+            {
+              "text": "Block the number",
+              "result": "bad",
+              "lose": 0
+            }
+          ],
+          "explain": "It came from a number you saved and it asks for nothing private. Staying safe doesn't mean treating everyone as a scammer.",
+          "flags": []
+        }
+      ],
+      "disclaimer_names": "Every company, person, address and phone number in this game is made up.",
+      "ranks": [
+        {
+          "min": 8,
+          "name": "Vault door",
+          "line": "You stopped every scam and still answered the friendly texts."
+        },
+        {
+          "min": 6,
+          "name": "Careful closer",
+          "line": "You caught most of them. Look back at the ones that slipped."
+        },
+        {
+          "min": 0,
+          "name": "Easy target, for now",
+          "line": "That's what this game is for. Play again with the rule in mind."
+        }
+      ],
+      "facts_panel": [
+        "bec_losses",
+        "bec_complaints",
+        "rat_frozen",
+        "rat_rate",
+        "re_losses"
+      ],
+      "takeaways": [
+        "Before any money moves, call a number you already have. Never the one in the message.",
+        "A change in wiring instructions is a stop sign, every time.",
+        "The right email address, the right caller ID and a familiar voice can all be faked.",
+        "Never send account numbers by email or text, or read them to someone who called you.",
+        "If money goes to the wrong place, call your bank right away to recall the wire, then report it at ic3.gov. In 2025 the FBI's recovery team froze {{rat_rate}} of the money in cases reported to it."
+      ],
+      "sources": [
+        "ic3_2025",
+        "cfpb_closing_scams",
+        "dc_disb_wire",
+        "fcc_spoofing"
+      ],
+      "loss_line": "One slip sent money to scammers. With wire fraud, one slip is all it takes, so the habit has to hold every time."
     }
   }
 }
