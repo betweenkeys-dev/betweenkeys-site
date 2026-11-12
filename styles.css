@@ -163,7 +163,8 @@ p { margin: 0 0 16px; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .nav { display: none; }
+  .nav a:not(.nav-games) { display: none; }
+  .nav a.nav-games { border: 1px solid var(--gold); border-radius: 999px; padding: 6px 14px; color: var(--gold); }
   .about-grid, .cards, .ktc-grid, .coalition-grid { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr; }
   .pillar, .pillar:nth-child(even) { padding: 28px 0; border-right: none; }
