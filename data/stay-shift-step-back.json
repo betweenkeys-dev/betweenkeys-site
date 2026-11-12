@@ -208,6 +208,38 @@
       "published": "daily",
       "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "get_latest": "Look at the 10 Yr column for today's yield."
+    },
+    "nar_profile_2025": {
+      "name": "NAR 2025 Profile of Home Buyers and Sellers reveals market extremes",
+      "publisher": "National Association of Realtors",
+      "kind": "primary",
+      "published": "2025-11-04",
+      "url": "https://www.nar.realtor/news/real-estate-news/nar-2025-profile-of-home-buyers-sellers-reveals-market-extremes",
+      "get_latest": "NAR publishes a new Profile each November."
+    },
+    "nar_ehs_sep2026": {
+      "name": "Existing-home sales increased 1.5% in September",
+      "publisher": "National Association of Realtors",
+      "kind": "primary",
+      "published": "2026-10-13",
+      "url": "https://www.nar.realtor/newsroom/existing-home-sales-increased-1-5-in-september-according-to-nar-report",
+      "get_latest": "NAR posts existing-home sales around the 20th of each month."
+    },
+    "mmp": {
+      "name": "Maryland Mortgage Program",
+      "publisher": "Maryland Department of Housing and Community Development",
+      "kind": "official",
+      "published": "ongoing",
+      "url": "https://mmp.maryland.gov/",
+      "get_latest": "Program rules and amounts change, so check before quoting."
+    },
+    "dc_hpap": {
+      "name": "Home Purchase Assistance Program (HPAP)",
+      "publisher": "DC Department of Housing and Community Development",
+      "kind": "official",
+      "published": "ongoing",
+      "url": "https://dhcd.dc.gov/service/home-purchase-assistance-program",
+      "get_latest": "Program rules and amounts change, so check before quoting."
     }
   },
   "facts": {
@@ -484,6 +516,39 @@
       "value": 7.4,
       "as_of": "early October 2026",
       "source": "ap_rates_2026_11_05"
+    },
+    "agent_buyers": {
+      "display": "88%",
+      "value": 88,
+      "as_of": "NAR 2025 Profile",
+      "source": "nar_profile_2025",
+      "note": "Share of recent buyers who used an agent or broker."
+    },
+    "agent_sellers": {
+      "display": "91%",
+      "value": 91,
+      "as_of": "NAR 2025 Profile",
+      "source": "nar_profile_2025"
+    },
+    "first_time_sep": {
+      "display": "31%",
+      "value": 31,
+      "as_of": "September 2026",
+      "source": "nar_ehs_sep2026",
+      "note": "National. NAR's yearly mailed survey puts first-time buyers lower."
+    },
+    "cash_sep": {
+      "display": "27%",
+      "value": 27,
+      "as_of": "September 2026",
+      "source": "nar_ehs_sep2026"
+    },
+    "us_sales_pace": {
+      "display": "3.99 million",
+      "value": 3990000,
+      "as_of": "September 2026",
+      "source": "nar_ehs_sep2026",
+      "note": "Existing-home sales, seasonally adjusted annual rate."
     }
   },
   "games": {
@@ -1375,6 +1440,343 @@
         "freddie_pmms",
         "treasury_daily",
         "bright_oct_2026"
+      ]
+    },
+    "stay-shift-step-back": {
+      "title": "Stay, Shift or Step Back",
+      "version": "1.0",
+      "tagline": "Steer an agent's business through eight quarters of news.",
+      "minutes": 5,
+      "intro": "You're a DC and Maryland agent. Eight things happen between 2027 and 2028. Some are facts. Some are WHAT IF scenarios. Pick a move each time and watch your closings and your clients' trust.",
+      "start_trust": 5,
+      "quarters": [
+        {
+          "id": "q1",
+          "when": "Early 2027",
+          "whatif": false,
+          "headline": "Stablecoin rules take effect {{genius_effective}}.",
+          "detail": "A buyer says, \"My down payment is in crypto. Can I just use that?\"",
+          "facts": [
+            "genius_effective"
+          ],
+          "sources": [
+            "occ_genius_final",
+            "fannie_crypto"
+          ],
+          "choices": [
+            {
+              "text": "Tell them it should be fine",
+              "path": "stay",
+              "deal": 0,
+              "trust": -2,
+              "result": "Their lender wouldn't count it until it was sold and deposited. The closing slipped two weeks, and they remember who told them it was fine."
+            },
+            {
+              "text": "Connect them with a crypto-ready lender this week",
+              "path": "shift",
+              "deal": 1,
+              "trust": 2,
+              "result": "The lender sorted it out early. The buyer closed on time and told two friends about you."
+            },
+            {
+              "text": "Pass. Crypto buyers aren't worth the trouble",
+              "path": "step",
+              "deal": 0,
+              "trust": 0,
+              "result": "Another agent took the buyer and closed the deal."
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "when": "Spring 2027",
+          "whatif": true,
+          "headline": "WHAT IF the Fed raises rates again and mortgages hit 7.5%?",
+          "detail": "Your waiting buyers go quiet. Right now the Fed's range is {{fed_range}}, and the 30-year rate is {{rate_now}}.",
+          "facts": [
+            "fed_range",
+            "rate_now"
+          ],
+          "sources": [
+            "fed_2026_10_28",
+            "freddie_pmms"
+          ],
+          "choices": [
+            {
+              "text": "Wait for rates to come down",
+              "path": "stay",
+              "deal": 0,
+              "trust": 0,
+              "result": "Nothing broke, but nothing moved. The spring went by."
+            },
+            {
+              "text": "Teach buyers about rate buydowns and assumable FHA and VA loans",
+              "path": "shift",
+              "deal": 2,
+              "trust": 1,
+              "result": "Two buyers found homes with a seller-paid buydown. This is the 1981 playbook."
+            },
+            {
+              "text": "Post one plain-language rate explainer every week",
+              "path": "market",
+              "deal": 1,
+              "trust": 2,
+              "result": "A few posts got shared. One reader became a client."
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "when": "Summer 2027",
+          "whatif": true,
+          "headline": "WHAT IF another round of federal layoffs hits the area?",
+          "detail": "Unemployment in DC, Prince George's and Charles counties was already {{dcmd_unemp}} in July 2026. A laid-off federal worker needs to sell.",
+          "facts": [
+            "dcmd_unemp"
+          ],
+          "sources": [
+            "dc_does_jul_2026"
+          ],
+          "choices": [
+            {
+              "text": "List it high to leave room to negotiate",
+              "path": "stay",
+              "deal": 0,
+              "trust": -2,
+              "result": "It sat for two months, then sold for less after two price cuts. The seller lost time they didn't have."
+            },
+            {
+              "text": "Price it right from day one and plan a fast sale",
+              "path": "shift",
+              "deal": 1,
+              "trust": 2,
+              "result": "It sold in three weeks. The seller sent you their neighbor."
+            },
+            {
+              "text": "Refer them to a colleague. You're stretched thin",
+              "path": "step",
+              "deal": 0,
+              "trust": 1,
+              "result": "Your colleague closed it and sent you a referral fee."
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "when": "Fall 2027",
+          "whatif": false,
+          "headline": "Clients can get basic answers from AI tools for free.",
+          "detail": "Still, {{agent_buyers}} of buyers and {{agent_sellers}} of sellers used an agent, per NAR's 2025 survey.",
+          "facts": [
+            "agent_buyers",
+            "agent_sellers"
+          ],
+          "sources": [
+            "nar_profile_2025"
+          ],
+          "choices": [
+            {
+              "text": "Ignore it. Clients still need you",
+              "path": "stay",
+              "deal": 0,
+              "trust": 0,
+              "result": "True for now. But you spent the same hours on paperwork while others spent them with clients."
+            },
+            {
+              "text": "Use AI for listing drafts and scheduling, then spend the saved hours on calls",
+              "path": "market",
+              "deal": 1,
+              "trust": 1,
+              "result": "Five more conversations a week turned into one more listing."
+            },
+            {
+              "text": "Let AI answer client questions for you",
+              "path": "step",
+              "deal": 0,
+              "trust": -2,
+              "result": "A tool gave a client a wrong answer about closing costs under your name. Keep a person in charge of advice."
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "when": "Early 2028",
+          "whatif": true,
+          "headline": "WHAT IF a peace deal reopens the Strait of Hormuz?",
+          "detail": "Oil drops and rates drift toward the mid 6s. The EIA already expects Brent oil to average {{brent_2027_fcst}} in 2027.",
+          "facts": [
+            "brent_2027_fcst"
+          ],
+          "sources": [
+            "eia_steo_oct2026"
+          ],
+          "choices": [
+            {
+              "text": "Call every past client and buyer you kept in touch with",
+              "path": "stay",
+              "deal": 3,
+              "trust": 1,
+              "result": "Waiting buyers came back to the agent they already knew. This is your best quarter."
+            },
+            {
+              "text": "Spend on ads to catch the rush",
+              "path": "market",
+              "deal": 1,
+              "trust": 0,
+              "result": "Some leads, but most went to agents they already knew."
+            },
+            {
+              "text": "Take the quarter off. It finally feels calm",
+              "path": "step",
+              "deal": 0,
+              "trust": 0,
+              "result": "Rested, but you missed the busiest stretch in two years."
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "when": "Spring 2028",
+          "whatif": false,
+          "headline": "Investors are a big share of buyers.",
+          "detail": "{{cash_sep}} of U.S. buyers paid all cash in September 2026. An investor asks about buying shares of rentals sold as tokens.",
+          "facts": [
+            "cash_sep"
+          ],
+          "sources": [
+            "nar_ehs_sep2026",
+            "sec_tokenized_2026"
+          ],
+          "choices": [
+            {
+              "text": "Say the tokens look like a smart buy",
+              "path": "stay",
+              "deal": 0,
+              "trust": -2,
+              "result": "That's investment advice you aren't licensed to give. A token of a rental is still a security."
+            },
+            {
+              "text": "Learn rentals and tax sales so you can serve investors",
+              "path": "shift",
+              "deal": 2,
+              "trust": 1,
+              "result": "Two small investors bought rentals through you."
+            },
+            {
+              "text": "Send token questions to a licensed advisor, and help with the property side",
+              "path": "shift",
+              "deal": 1,
+              "trust": 2,
+              "result": "The investor trusted you more for knowing where your lane ends."
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "when": "Summer 2028",
+          "whatif": false,
+          "headline": "A client forwards an email: \"Our title company changed banks.\"",
+          "detail": "Email scams that redirect payments cost {{bec_losses}} in 2025, per the FBI.",
+          "facts": [
+            "bec_losses"
+          ],
+          "sources": [
+            "ic3_2025"
+          ],
+          "choices": [
+            {
+              "text": "Tell them it's probably fine",
+              "path": "stay",
+              "deal": -1,
+              "trust": -3,
+              "result": "The money went to a scammer. The deal fell apart, and so did the relationship."
+            },
+            {
+              "text": "Tell them to stop and call the title company at the number they saved",
+              "path": "stay",
+              "deal": 1,
+              "trust": 3,
+              "result": "It was a scam. Your client kept their down payment and tells everyone how you saved it."
+            },
+            {
+              "text": "Reply to the email and ask",
+              "path": "stay",
+              "deal": -1,
+              "trust": -2,
+              "result": "The scammer answered and \"confirmed\" it."
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "when": "Late 2028",
+          "whatif": false,
+          "headline": "Time to plan the next two years.",
+          "detail": "About {{us_sales_pace}} existing homes a year are selling across the U.S. The pie is smaller than in 2021.",
+          "facts": [
+            "us_sales_pace"
+          ],
+          "sources": [
+            "nar_ehs_sep2026"
+          ],
+          "choices": [
+            {
+              "text": "Keep going full time with the clients you have",
+              "path": "stay",
+              "deal": 1,
+              "trust": 0,
+              "result": "Steady, if your referral base holds."
+            },
+            {
+              "text": "Focus on downsizers and buyers using down payment help",
+              "path": "shift",
+              "deal": 2,
+              "trust": 1,
+              "result": "Downsizers and help-program buyers kept moving even when others waited."
+            },
+            {
+              "text": "Become a referrer and hand day-to-day work to a junior partner",
+              "path": "step",
+              "deal": 1,
+              "trust": 1,
+              "result": "Less stress, a share of every deal, and time for what comes next. Check your broker and Maryland license rules first."
+            }
+          ]
+        }
+      ],
+      "paths": {
+        "stay": "Stay the course",
+        "shift": "Shift who you serve",
+        "market": "Change how you market",
+        "step": "Step back"
+      },
+      "outcomes": [
+        {
+          "min": 15,
+          "name": "Thriving",
+          "line": "Clients trust you and keep sending people. You grew while the pie shrank."
+        },
+        {
+          "min": 9,
+          "name": "Holding steady",
+          "line": "A solid two years. A few moves cost you deals or trust. Look back at those."
+        },
+        {
+          "min": 0,
+          "name": "Rough stretch",
+          "line": "Two hard years. Play again and try the moves that build trust."
+        }
+      ],
+      "takeaways": [
+        "Most agents will mix two choices: stay the course with past clients while shifting toward the buyers still moving.",
+        "Trust is the business. Protecting a client from a wire scam is worth more than any one deal.",
+        "Explaining the news in plain words is how agents stand out now that AI handles the basics.",
+        "Know your lane. Send crypto, tax and investment questions to lenders, CPAs and licensed advisors.",
+        "Stepping back can mean referring and partnering, not quitting. Check your broker and Maryland license rules first."
+      ],
+      "help_links": [
+        "mmp",
+        "dc_hpap"
       ]
     }
   }
