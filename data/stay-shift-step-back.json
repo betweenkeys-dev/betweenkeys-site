@@ -11,7 +11,7 @@
     "substack_label": "Read more on the Between Keys Substack",
     "share_prompt": "Send this to someone who's buying or selling next year.",
     "games_hub_url": "../",
-    "feedback_url": "",
+    "feedback_url": "https://script.google.com/macros/s/AKfycbzj7OR4pDPmn5HBcYqLgwApTUUHZnjYdnSuDNMRlvPw1-TrRPQqN83zaY4_OrFeeqy6/exec",
     "feedback_email": "techteam@betweenkeys.org",
     "data_note": "Edit numbers here. Every fact keeps its as_of date and source id. Pages read this file live, so no code changes are needed."
   },
