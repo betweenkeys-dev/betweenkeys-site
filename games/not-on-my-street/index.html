@@ -201,6 +201,7 @@ button { font: inherit; color: inherit; }
   <main class="stage" id="stage" aria-live="polite"><p class="loading">Loading the latest numbers…</p></main>
 
   <nav class="nav" aria-label="Game">
+    <button type="button" id="navHome">Home</button>
     <button type="button" id="navGames">All games</button>
     <button type="button" id="navStart">Start over</button>
     <button type="button" id="navSound" aria-pressed="false">Music off</button>
@@ -225,7 +226,7 @@ button { font: inherit; color: inherit; }
 <script>
 (function () {
   var GAME_ID = 'not-on-my-street';
-  var GAME_VERSION = '1.1';
+  var GAME_VERSION = '1.2';
   var DATA_PATHS = ['../../data/stay-shift-step-back.json'];
 
   var D, G, meta, state = { i: -1, score: 0, results: [], phase: 'title' };
@@ -641,6 +642,9 @@ button { font: inherit; color: inherit; }
   }
   function wireNav() {
     twoTap(document.getElementById('navStart'), 'Start over', function () { renderTitle(); window.scrollTo({ top: 0 }); });
+    twoTap(document.getElementById('navHome'), 'Home', function () {
+      feedback(function () { location.href = meta.home_url || '/'; }, 'back to home');
+    });
     twoTap(document.getElementById('navGames'), 'All games', function () {
       feedback(function () {
         if (meta.games_hub_url) location.href = meta.games_hub_url;

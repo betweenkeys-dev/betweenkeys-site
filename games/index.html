@@ -57,12 +57,23 @@ section > p { color: var(--muted); }
 .soon li:last-child { border-bottom: 1px solid var(--rule); }
 .soon b { font-family: var(--display); font-size: 24px; font-weight: 600; }
 .soon span { color: var(--muted); font-size: 17px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 20px; border-radius: 10px; border: 2px solid var(--ink); color: var(--ink); background: transparent; font-weight: 600; font-size: 17px; text-decoration: none; }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
+.btn:hover { border-color: var(--gold); }
+.btnrow { display: flex; flex-wrap: wrap; gap: 12px; }
+.btnrow .btn { flex: 1 1 180px; }
 .tag { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 footer { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 18px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <div class="topbar">
+    <a class="btn" href="/">Home</a>
+    <a class="btn gold" href="https://substack.com/@betweenkeys" target="_blank" rel="noopener">Substack</a>
+  </div>
+
   <header>
     <p class="kicker">Between Keys · Learning Out Loud</p>
     <h1>Games</h1>
@@ -93,7 +104,7 @@ footer { display: flex; flex-direction: column; gap: 8px; font-size: 15px; color
   <footer>
     <p>Questions from Between Keys. Research and explanations by my AI assistant.</p>
     <p>For education only. Not financial, legal or tax advice.</p>
-    <p><a href="https://substack.com/@betweenkeys" target="_blank" rel="noopener">Read more on the Between Keys Substack</a> · <a href="../">Between Keys home</a></p>
+    <div class="btnrow"><a class="btn" href="/">Back to Between Keys home</a><a class="btn gold" href="https://substack.com/@betweenkeys" target="_blank" rel="noopener">Read on Substack</a></div>
   </footer>
 </div>
 </body>
