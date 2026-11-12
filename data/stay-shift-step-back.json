@@ -112,6 +112,54 @@
       "published": "undated",
       "url": "https://www.fcc.gov/spoofing",
       "get_latest": "The FCC page lists current call-blocking tools."
+    },
+    "congress_s1582": {
+      "name": "S. 1582, GENIUS Act",
+      "publisher": "Congress.gov",
+      "kind": "official",
+      "published": "2025-07-18",
+      "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1582",
+      "get_latest": "Congress.gov lists every action on the law."
+    },
+    "occ_genius_final": {
+      "name": "Final Rule to Implement GENIUS Act",
+      "publisher": "Office of the Comptroller of the Currency",
+      "kind": "official",
+      "published": "2026-10-21",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-92.html",
+      "get_latest": "Other bank regulators are finishing their own GENIUS Act rules."
+    },
+    "sec_tokenized_2026": {
+      "name": "Statement on Tokenized Securities",
+      "publisher": "SEC Division of Corporation Finance",
+      "kind": "official",
+      "published": "2026-01-28",
+      "url": "https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities",
+      "get_latest": "SEC staff statements are views, not rules, and can change."
+    },
+    "jpm_coin": {
+      "name": "JPM Coin (JPMD) USD Deposit Token Available for Institutional Clients",
+      "publisher": "J.P. Morgan",
+      "kind": "primary",
+      "published": "2025",
+      "url": "https://www.jpmorgan.com/payments/newsroom/jpm-coin-usd-deposit-token-institutional-clients",
+      "get_latest": "J.P. Morgan's payments newsroom posts updates."
+    },
+    "fannie_crypto": {
+      "name": "What is required to use virtual currency?",
+      "publisher": "Fannie Mae",
+      "kind": "official",
+      "published": "undated",
+      "url": "https://ask-poli.fanniemae.com/Underwriting-Borrowers/Asset-Assessment/Verification-of-Depository-Assets/VoD-Documentation-Accounts/1089496701/Can-cryptocurrency-such-as-bitcoin-be-used-for-assets.htm",
+      "get_latest": "Fannie Mae's Selling Guide is the final word and is updated monthly."
+    },
+    "fhfa_order_news": {
+      "name": "FHFA directs Fannie Mae and Freddie Mac to explore cryptocurrency as an asset for mortgages",
+      "publisher": "The Block",
+      "kind": "news",
+      "published": "2025-06-25",
+      "url": "https://www.theblock.co/post/359708/fhfa-directs-fannie-mae-and-freddie-mac-to-explore-cryptocurrency-as-an-asset-for-mortgages",
+      "get_latest": "Ask the lender which rule they follow today."
     }
   },
   "facts": {
@@ -281,6 +329,25 @@
       "value": "2027278000",
       "as_of": "November 2026",
       "source": "dc_disb_wire"
+    },
+    "genius_effective": {
+      "display": "January 18, 2027",
+      "value": "2027-01-18",
+      "as_of": "October 21, 2026",
+      "source": "occ_genius_final",
+      "note": "The GENIUS Act takes effect on this date. The OCC finished its rules on October 21, 2026."
+    },
+    "fhfa_order_date": {
+      "display": "June 25, 2025",
+      "value": "2025-06-25",
+      "as_of": "June 25, 2025",
+      "source": "fhfa_order_news"
+    },
+    "sec_statement_date": {
+      "display": "January 28, 2026",
+      "value": "2026-01-28",
+      "as_of": "January 28, 2026",
+      "source": "sec_tokenized_2026"
     }
   },
   "games": {
@@ -827,6 +894,168 @@
         "fcc_spoofing"
       ],
       "loss_line": "One slip sent money to scammers. With wire fraud, one slip is all it takes, so the habit has to hold every time."
+    },
+    "recipe-book": {
+      "title": "The Recipe Book",
+      "version": "0.1",
+      "tagline": "Crypto words, explained with the kitchen you already know.",
+      "minutes": 5,
+      "intro": "Each card shows something from the kitchen. Name the money word it stands for, then pick what it means at a closing.",
+      "cards": [
+        {
+          "id": "blockchain",
+          "pic": "book",
+          "kitchen_name": "The family recipe book",
+          "kitchen": "Every relative keeps an identical copy, written in pen. New recipes go into every copy. Change Grandma's pound cake in one book, and every other book proves it's wrong.",
+          "term": "Blockchain",
+          "closing_short": "A shared record of who owns what that's very hard to fake",
+          "closing": "A shared record that's very hard to fake. Useful for deeds and payments. Maryland is only studying it for property records, with a report due {{md_study_due}}.",
+          "facts": [
+            "md_study_due"
+          ],
+          "sources": [
+            "md_sb168_ch748"
+          ]
+        },
+        {
+          "id": "crypto",
+          "pic": "vanilla",
+          "kitchen_name": "The jar of vanilla beans",
+          "kitchen": "It's worth money and people trade it, but the price can jump or drop a lot in a month. The recipe book tracks who owns each jar.",
+          "term": "Crypto",
+          "closing_short": "Money whose price can swing a lot before closing day",
+          "closing": "Bitcoin and coins like it. A down payment held in crypto can grow or shrink fast between contract and closing. Bring in a lender who handles crypto early.",
+          "facts": [],
+          "sources": []
+        },
+        {
+          "id": "stablecoin",
+          "pic": "cup",
+          "kitchen_name": "The measuring cup",
+          "kitchen": "A cup is always a cup. The company keeps a dollar on the shelf for every coin it makes, so each one stays worth one dollar.",
+          "term": "Stablecoin",
+          "closing_short": "Digital dollars that always equal $1 and move fast",
+          "closing": "Dollars that can move in minutes, even on weekends. Federal rules for the companies that make them take effect {{genius_effective}}.",
+          "facts": [
+            "genius_effective"
+          ],
+          "sources": [
+            "congress_s1582",
+            "occ_genius_final"
+          ]
+        },
+        {
+          "id": "smart-contract",
+          "pic": "bread",
+          "kitchen_name": "The bread machine",
+          "kitchen": "Load the ingredients, press start, and it mixes, rises and bakes on its own, step by step, with nobody standing over it.",
+          "term": "Smart contract",
+          "closing_short": "Code that releases money automatically when conditions are met",
+          "closing": "Code that could release earnest money once every condition in the deal is met, like a clear inspection and a signed loan.",
+          "read": "This is the one most likely to reach closings first, through title and escrow companies. It's still rare.",
+          "facts": [],
+          "sources": []
+        },
+        {
+          "id": "tokenizing",
+          "pic": "cake",
+          "kitchen_name": "The sheet cake cut into squares",
+          "kitchen": "Cut one cake into 24 squares so 24 people can each buy a piece, instead of one person buying the whole cake.",
+          "term": "Tokenizing",
+          "closing_short": "Selling small digital shares of a property to investors",
+          "closing": "Selling small digital shares of a property. SEC staff said on {{sec_statement_date}} that putting an investment on a blockchain doesn't change the rules for it. A square of a rental is still an investment.",
+          "facts": [
+            "sec_statement_date"
+          ],
+          "sources": [
+            "sec_tokenized_2026"
+          ]
+        },
+        {
+          "id": "deposit-token",
+          "pic": "giftcard",
+          "kitchen_name": "The grocery store gift card",
+          "kitchen": "Money you already put in backs it, and it only works at that one store.",
+          "term": "Deposit token",
+          "closing_short": "Bank money in token form, backed by that one bank",
+          "closing": "Money a bank already holds, turned into tokens that can move on a blockchain. It's only as good as the bank behind it. JPMorgan's JPM Coin works this way, and it's for business clients, not homebuyers.",
+          "facts": [],
+          "sources": [
+            "jpm_coin"
+          ]
+        },
+        {
+          "id": "wallet",
+          "pic": "lockbox",
+          "kitchen_name": "The recipe box with a lock",
+          "kitchen": "Whoever has the key can use what's inside. Lose the key and nobody can open it, not even a bank.",
+          "term": "Wallet",
+          "closing_short": "Where a person keeps their own crypto, locked by a key",
+          "closing": "The app or device where someone keeps their own crypto. It's hard for a lender to verify, so buyers usually need their funds somewhere a lender can check.",
+          "facts": [],
+          "sources": []
+        },
+        {
+          "id": "exchange",
+          "pic": "store",
+          "kitchen_name": "The big grocery store",
+          "kitchen": "You trade dollars for vanilla beans there, and the store will keep what you bought on a shelf in its own pantry for you.",
+          "term": "Exchange",
+          "closing_short": "A company like Coinbase where people buy and hold crypto",
+          "closing": "A company like Coinbase. Crypto held at an exchange is easier for a lender to check than crypto in a personal wallet.",
+          "facts": [],
+          "sources": []
+        },
+        {
+          "id": "statement",
+          "pic": "list",
+          "kitchen_name": "The pantry list",
+          "kitchen": "The store's printed list of what's on your shelf, what it's worth today, and what came in and went out.",
+          "term": "Exchange statement",
+          "closing_short": "A crypto company's statement a lender may read like a bank statement",
+          "closing": "A monthly statement from a crypto company. Fannie Mae's guidance says crypto must be sold into dollars and deposited before it counts. A federal order on {{fhfa_order_date}} told Fannie and Freddie to plan for counting it without selling. Ask the lender which rule they use.",
+          "facts": [
+            "fhfa_order_date"
+          ],
+          "sources": [
+            "fannie_crypto",
+            "fhfa_order_news"
+          ]
+        }
+      ],
+      "ranks": [
+        {
+          "min": 16,
+          "name": "Head chef",
+          "line": "You can explain these to a client without notes."
+        },
+        {
+          "min": 11,
+          "name": "Line cook",
+          "line": "You know most of the kitchen. Flip through the ones you missed."
+        },
+        {
+          "min": 0,
+          "name": "New in the kitchen",
+          "line": "That's fine. Play again and the pictures will stick."
+        }
+      ],
+      "takeaways": [
+        "Crypto is the vanilla: valuable, but the price moves. Bring in a crypto-ready lender early.",
+        "A stablecoin is the measuring cup: always one dollar. Federal rules take effect {{genius_effective}}.",
+        "The blockchain is the recipe book: a shared record that's hard to fake. Maryland is only studying it for deeds.",
+        "Tokenizing slices the cake into investments. A slice is still an investment, with investment rules.",
+        "When a buyer shows crypto as savings, the lender decides if it counts. Send crypto and tax questions to a lender and a CPA."
+      ],
+      "sources": [
+        "md_sb168_ch748",
+        "congress_s1582",
+        "occ_genius_final",
+        "sec_tokenized_2026",
+        "jpm_coin",
+        "fannie_crypto",
+        "fhfa_order_news"
+      ]
     }
   }
 }
