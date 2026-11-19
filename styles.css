@@ -28,12 +28,12 @@ a { color: inherit; }
 .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
 /* Piano key rule, used as a section divider */
+/* One octave = 7 white keys, black keys in a group of 2 then a group of 3 */
 .keys-rule {
-  height: 14px;
-  background:
-    repeating-linear-gradient(90deg, var(--charcoal) 0 10px, transparent 10px 22px, var(--charcoal) 22px 32px, transparent 32px 56px),
-    var(--paper);
-  opacity: .9;
+  height: 30px;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='98' height='30'><rect width='98' height='30' fill='%23FBF8F0'/><g fill='%23CFC5AC'><rect x='0' width='1' height='30'/><rect x='14' width='1' height='30'/><rect x='28' width='1' height='30'/><rect x='42' width='1' height='30'/><rect x='56' width='1' height='30'/><rect x='70' width='1' height='30'/><rect x='84' width='1' height='30'/></g><g fill='%232C2C2C'><rect x='9' width='9' height='18' rx='1'/><rect x='24' width='9' height='18' rx='1'/><rect x='51' width='9' height='18' rx='1'/><rect x='65.5' width='9' height='18' rx='1'/><rect x='80' width='9' height='18' rx='1'/></g></svg>") repeat-x left top;
+  border-top: 1px solid #CFC5AC;
+  border-bottom: 1px solid #CFC5AC;
 }
 
 /* Header */
@@ -44,13 +44,15 @@ a { color: inherit; }
   border-bottom: 1px solid rgba(201, 168, 76, .25);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; margin-right: 28px; }
 .brand img { width: 34px; height: 34px; }
 .wordmark { font-family: var(--serif); font-size: 26px; line-height: 1; color: #fff; letter-spacing: .3px; }
 .wordmark span { color: var(--gold); }
-.nav { display: flex; gap: 26px; }
-.nav a { color: #d9d4c7; text-decoration: none; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; }
+.nav { display: flex; gap: 22px; }
+.nav a { white-space: nowrap; color: #d9d4c7; text-decoration: none; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; }
 .nav a:hover { color: var(--gold); }
+
+@media (max-width: 1240px) { .nav a.nav-sec { display: none; } }
 
 /* Hero */
 .hero {
@@ -149,9 +151,22 @@ p { margin: 0 0 16px; }
 .coalition-grid .card .tag { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 10px; }
 .coalition-grid .card a.more { margin-top: 18px; font-weight: 500; color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 4px; }
 
+/* Work with me */
+.work-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 64px; align-items: start; }
+.services { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.service { border: 1px solid var(--line); background: #fff; padding: 24px 22px; }
+.service h3 { font-size: 21px; }
+.service p { color: var(--muted); margin: 0; font-size: 15px; }
+.work-cta { margin-top: 28px; }
+.small-note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
 /* Follow */
 .follow { text-align: center; }
 .follow .section-head { margin: 0 auto 30px; }
+.follow .sub { font-family: var(--serif); font-size: 26px; color: var(--gold-deep); margin: 0 0 14px; }
+.follow-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.btn-outline { border: 1px solid var(--charcoal); color: var(--charcoal); }
+.btn-outline:hover { border-color: var(--gold-deep); color: var(--gold-deep); }
 
 /* Footer */
 .site-footer { background: var(--ink); color: #a9a397; padding: 46px 0; font-size: 14px; }
@@ -159,13 +174,14 @@ p { margin: 0 0 16px; }
 .site-footer .wordmark { font-size: 22px; }
 .site-footer a { color: #d9d4c7; text-decoration: none; }
 .site-footer a:hover { color: var(--gold); }
-.footer-links { display: flex; gap: 22px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 
 /* Responsive */
 @media (max-width: 900px) {
   .nav a:not(.nav-games) { display: none; }
   .nav a.nav-games { border: 1px solid var(--gold); border-radius: 999px; padding: 6px 14px; color: var(--gold); }
-  .about-grid, .cards, .ktc-grid, .coalition-grid { grid-template-columns: 1fr; }
+  .about-grid, .cards, .ktc-grid, .coalition-grid, .work-grid { grid-template-columns: 1fr; }
+  .work-grid { gap: 36px; }
   .pillars { grid-template-columns: 1fr; }
   .pillar, .pillar:nth-child(even) { padding: 28px 0; border-right: none; }
   .pillar:nth-child(odd) { border-right: none; }
@@ -176,5 +192,30 @@ p { margin: 0 0 16px; }
 @media (max-width: 520px) {
   .wrap { padding: 0 16px; }
   .btn-ghost { margin: 12px 0 0; }
+  .services { grid-template-columns: 1fr; }
   .hero { min-height: 78vh; }
 }
+
+/* Home buying referral */
+.homebuy { background: var(--ink); color: #e8e3d6; padding: 72px 0; }
+.homebuy h2 { color: #fff; }
+.homebuy .eyebrow { color: var(--gold); }
+.homebuy .small-note { color: #a9a397; }
+.homebuy-inner { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+.homebuy-inner p { max-width: 640px; }
+@media (max-width: 900px) { .homebuy-inner { grid-template-columns: 1fr; gap: 24px; } .homebuy-inner .btn { justify-self: start; } }
+
+/* Request form */
+.request-form { margin-top: 56px; background: #fff; border: 1px solid var(--line); padding: 36px; max-width: 760px; scroll-margin-top: 80px; }
+.request-form label { display: block; font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 18px; }
+.request-form input, .request-form select, .request-form textarea {
+  display: block; width: 100%; margin-top: 6px; padding: 12px 14px; font: inherit; font-size: 16px; font-weight: 400;
+  color: var(--charcoal); background: var(--paper); border: 1px solid var(--line); border-radius: 2px;
+}
+.request-form input:focus, .request-form select:focus, .request-form textarea:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.request-form button { border: 0; cursor: pointer; }
+.request-form button:disabled { opacity: .6; cursor: wait; }
+.form-status { margin: 14px 0 0; font-size: 15px; color: var(--muted); min-height: 1.5em; }
+.hp { position: absolute; left: -9999px; }
+@media (max-width: 520px) { .request-form { padding: 24px 18px; } .field-row { grid-template-columns: 1fr; } }
